@@ -1,0 +1,63 @@
+body {
+  background-color: white;
+  overflow: hidden;
+}
+.type-討論區 {
+  text-align: left;
+}
+.type-首頁 {
+  text-align: center;
+}
+.type-NEWS {
+  text-align: center;
+}
+.type-回報區 {
+  text-align: center;
+}
+.class-大廳 {
+  text-align: center;
+}
+.col-3 {
+  background-color: aquamarine;
+  overflow: hidden;
+}
+.col-9 {
+  overflow: hidden;
+}
+.now-messages {
+  height: 80vh;
+  overflow-y: auto;
+}
+.logo {
+  width: 5vh;
+  height: 10vh;
+  background-color: #A561FF;
+  animation-name: logo;
+  animation-duration: 8s;
+  position: relative;
+  animation-iteration-count: infinite;
+}
+@keyframes logo  {
+  0%  {background-color: #A561FF; left:  0vw; top: 0px}
+  12.5% {background-color: #FD72AD; left: 25vw;top:  0px}
+  25% {background-color: #3498DB; left: 50vw;top: 0px}
+  37.5% {background-color: #34495E; left:  75vw;top: 0px}
+  50%{background-color: #A561FF; left:  90vw;top:  0px}
+  62.5% {background-color: #34495E; left:  75vw;top: 0px}
+  75% {background-color: #3498DB; left: 50vw;top: 0px}
+  87.5% {background-color: #FD72AD; left: 25vw;top:  0px}
+  100%  {background-color: #A561FF; left:  0vw; top: 0px}
+}
+/*
+.input-group {
+  position: absolute;
+  bottom: 0px;
+}
+
+.row {
+  height: 90%;
+}
+
+.input-group:first-child {
+  
+}*/
