@@ -48,6 +48,9 @@ body {
   87.5% {background-color: #FD72AD; left: 25vw;top:  0px}
   100%  {background-color: #A561FF; left:  0vw; top: 0px}
 }
+.msgs {
+  display: inline-block;
+}
 /*
 .input-group {
   position: absolute;

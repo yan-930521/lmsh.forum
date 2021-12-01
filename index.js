@@ -56,12 +56,14 @@ socket.on('NewMessage', msg => {
   Msgs[ty][cl][ch].push(handleMsg(msg));
   showMsg(ty, cl, ch)
 })
+
 window.onkeydown = e => {
   if (event.keyCode == 13) {
     sendMsg();
     e.preventDefault();
   }
 }
+
 function setwrong(str) {
   al.innerHTML = str;
 }
@@ -179,11 +181,13 @@ function handleTime(msgob) {
 
 function handleMsg(msgob) {
   let msg = document.createElement('div');
-  let str = document.createElement('pre');
+  let str = document.createElement('div');
   let content = linkifyHtml(msgob.content);
   let timestr = handleTime(msgob);
+  //str.className = "msgs"
   //let more = checkUrl(msgob.content);
-  str.innerHTML = `<span class="badge badge-pill badge-light ">第${nowfloor}樓</span>` + ` ${msgob.author.name ? msgob.author.name : "匿名"} - ${timestr}<br>      ${removehref(msgob.content)}`;//+more?`<br>${more}`:"";
+  str.innerHTML = `<span class="badge badge-pill badge-secondary">第${nowfloor}樓</span>` + ` ${msgob.author.name ? msgob.author.name : "匿名"} - <span class="badge badge-pill badge-light">${timestr}</span><br>${removehref(msgob.content)}<br><img src="">`;//+more?`<br>${more}`:"";
+  //str.innerHTML = `<span class="badge badge-pill badge-light "> 第${nowfloor}樓 </span>` + ` ${msgob.author.name ? msgob.author.name : "匿名"} - ${timestr}<br>      ${removehref(msgob.content)}`;//+more?`<br>${more}`:"";
   msg.appendChild(str);
   return msg;
 }
