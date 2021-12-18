@@ -2,21 +2,6 @@ body {
   background-color: white;
   overflow: hidden;
 }
-.type-討論區 {
-  text-align: left;
-}
-.type-首頁 {
-  text-align: center;
-}
-.type-NEWS {
-  text-align: center;
-}
-.type-回報區 {
-  text-align: center;
-}
-.class-大廳 {
-  text-align: center;
-}
 .col-3 {
   background-color: aquamarine;
   overflow: hidden;
@@ -28,9 +13,13 @@ body {
   height: 80vh;
   overflow-y: auto;
 }
+#type-Getting_Started {
+  height: 100vh;
+  overflow-y: auto;
+}
 .logo {
   width: 5vh;
-  height: 10vh;
+  height: 100vh;
   background-color: #A561FF;
   animation-name: logo;
   animation-duration: 8s;

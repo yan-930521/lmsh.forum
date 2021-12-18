@@ -9,7 +9,9 @@ var text = document.getElementById('text');
 var sendblock = document.getElementById('send-block');
 var al = document.getElementById('alert');
 var home = document.getElementById('type-首頁');
-home.innerHTML = '<p></p><p></p><h1>歡迎！</h1><h3 class="alert alert-secondary" role="alert">注意事項</h3><pre class="alert alert-primary" role="alert"><h3># 請勿人身攻擊<br># 請勿散播假消息<br># 開車要注意車速<br># 本站不提供私訊系統<br># 本站在手機端會稍微跑版<br># 老師請勿進入</h3></pre><h2 class="alert alert-danger" role="alert">本站之訊息傳輸接受<a href="https://developer.mozilla.org/zh-TW/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML</a>語法<br>一旦發現訊息有任何問題，請大家立刻點選『ban』按鈕暫時隱藏</h2><br>Copyright 2021 yan-930521  All Rights Reserved.';
+home.style = "height: 100vh;overflow-y: auto;"
+home.innerHTML = '<p></p><p></p><h1>歡迎！</h1><h3 class="alert alert-secondary" role="alert">注意事項</h3><pre class="alert alert-primary" role="alert"><h3># 請勿人身攻擊<br># 請勿散播假消息<br># 開車要注意車速<br># 本站不提供私訊系統<br># 本站在手機端會稍微跑版<br># 老師請勿進入</h3></pre><h2 class="alert alert-danger" role="alert">本站之訊息傳輸接受<a href="https://developer.mozilla.org/zh-TW/docs/Learn/Getting_started_with_the_web/HTML_basics">HTML</a>語法</h2><br>Copyright 2021 yan-930521  All Rights Reserved.<br><hr>';
+//<br>一旦發現訊息有任何問題，請大家立刻點選『ban』按鈕暫時隱藏
 var Msgs = false;
 var Data = false;
 var Load = false;
@@ -72,12 +74,12 @@ function allowsend(b) {
     sendblock.innerHTML = '<button class="btn btn-outline-secondary" type="button" id="send-btn" onclick="sendMsg()">send</button>';
   } else {
     sendblock.innerHTML = '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">send</button>';
-    setwrong('請先選擇頻道');
+    setwrong('無效頻道');
   }
 }
 function sendMsg() {
   if (!nowch) {
-    alert("plz choose a channel");
+    alert("invalid channel");
     return;
   }
   if (text.value == "") {

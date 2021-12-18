@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>黎明 論壇</title>
+    <!--
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css" />
@@ -11,7 +12,26 @@
     <script src="https://cdn.jsdelivr.net/npm/linkify-html@3.0.3/dist/linkify-html.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <script src="./autoload.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.1/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/linkifyjs@3.0.3/dist/linkify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/linkify-html@3.0.3/dist/linkify-html.min.js"></script>
+    <!--
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    -->
   </head>
   <body>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -39,6 +59,8 @@
 
           <a class="nav-link active" id="v-pills-首頁-tab" data-toggle="pill" href="#v-pills-首頁" role="tab" aria-controls="v-pills-首頁" aria-selected="true" onclick="showCl('首頁')">首頁</a>
           
+          <a class="nav-link" id="v-pills-Getting_Started-tab" data-toggle="pill" href="#v-pills-Getting_Started" role="tab" aria-controls="v-pills-Getting_Started" aria-selected="false" onclick="showCl('Getting_Started')">Getting Started</a>
+
           <a class="nav-link" id="v-pills-NEWS-tab" data-toggle="pill" href="#v-pills-NEWS" role="tab" aria-controls="v-pills-NEWS" aria-selected="false" onclick="showCl('NEWS')">NEWS</a>
 
           <a class="nav-link" id="v-pills-討論區-tab" data-toggle="pill" href="#v-pills-討論區" role="tab" aria-controls="v-pills-討論區" aria-selected="false" onclick="showCl('討論區')">討論區</a>
@@ -59,38 +81,79 @@
             <div id="type-首頁">
             </div>
           </div>
+          <div class="tab-pane fade" id="v-pills-Getting_Started" role="tabpanel" aria-labelledby="v-pills-Getting_Started-tab">
+            <div id="type-Getting_Started">
+              <p></p>
+              <p></p>
+              <div class="btn-group-vertical">
+                <p>
+                  <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                    初學者 ?
+                  </button>
+                </p>
+                
+                <p>
+                  <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    進階使用方法
+                  </button>
+                </p>
+
+                <p>
+                  <button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                    關於我<del>們</del>
+                  </button>
+                </p>
+              </div>
+
+              <div class="collapse" id="collapse1">
+                <div class="card card-body" id="help1">
+                  #教學 1
+                  <img src='https://media.discordapp.net/attachments/856353235216236554/916959375418089472/padoru.gif' style="width: 50vmin;"></video>
+                </div>
+              </div>
+
+              <div class="collapse" id="collapse2">
+                <div class="card card-body">
+                  #教學 2
+                  <img src='https://media.discordapp.net/attachments/856353235216236554/916958843399979028/padoru-merry-christmas.gif'style="width: 50vmin;"></img>
+                </div>
+              </div>
+
+              <div class="collapse" id="collapse3">
+                <div class="card card-body">
+                  <a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'><img src='https://images-ext-1.discordapp.net/external/YvM-cld_PaHrTlIa-mq2F4XPrZqq36hLt5OS4BIDQwQ/https/cdn.discordapp.com/avatars/823885929830940682/203a1b515c750736945fa937f04cc464.webp'style="width: 10vmin;"></img> 櫻2#0915</a>
+                  
+                </div>
+              </div>
+
+            </div>
+          </div>
           <div class="tab-pane fade" id="v-pills-NEWS" role="tabpanel" aria-labelledby="v-pills-NEWS-tab">
-            <div class="type-NEWS">
+            <div id="type-NEWS">
               <p></p>
               <p></p>
-              <h1>Welcome<h1>
-              <h1>to<h1>
-              <h1>NEWS<h1>
+              <h3>Welcome to NEWS<h3>
             </div>
           </div>
           <div class="tab-pane fade" id="v-pills-討論區" role="tabpanel" aria-labelledby="v-pills-討論區-tab">
-            <div class="type-討論區">
+            <div id="type-討論區">
               <p></p>
               <p></p>
               <h3>Welcome to 討論區<h3>
             </div>
           </div>
           <div class="tab-pane fade" id="v-pills-大廳" role="tabpanel" aria-labelledby="v-pills-大廳-tab">
-            <div class="class-大廳">
+            <div id="class-大廳">
               <p></p>
               <p></p>
-              <h1>Welcome<h1>
-              <h1>to<h1>
-              <h1>大廳<h1>
+              <h3>Welcome to 大廳<h3>
             </div>
           </div>
           <div class="tab-pane fade" id="v-pills-回報區" role="tabpanel" aria-labelledby="v-pills-回報區-tab">
-            <div class="type-回報區">
+            <div id="type-回報區">
               <p></p>
               <p></p>
-              <h1>Welcome<h1>
-              <h1>to<h1>
-              <h1>回報區<h1>
+              <h3>Welcome to 回報區<h3>
             </div>
           </div>
         </div>
@@ -99,7 +162,7 @@
       </div>
     </div>
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="text" aria-label="text area" aria-describedby="button-addon1" id="text"autofocus autocomplete="off"">
+      <input type="text" class="form-control" placeholder="text" aria-label="text area" aria-describedby="button-addon1" id="text"autofocus autocomplete="off">
       <div class="input-group-append" id="button-addon1">
           <div id="send-block"></div>
       </div>
@@ -111,6 +174,10 @@
       </div>
     </div>
     <script src="index.js"></script>
+    <script src="getting_start.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     <!-- Copyright 2021 yan-930521  All Rights Reserved. -->
   </body>
 </html>
